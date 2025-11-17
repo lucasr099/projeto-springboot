@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.lucasreis.curso.entites.enums.OrderStatus;
 import jakarta.persistence.*;
 
+
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
@@ -28,6 +29,9 @@ public class Order implements Serializable {
     @ManyToOne
     @JoinColumn(name = "client_id")
     private User client;
+
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private Payment payment;
 
     @OneToMany(mappedBy = "id.order")
     private Set<OrderItem> items = new HashSet<>();
@@ -80,6 +84,13 @@ public class Order implements Serializable {
     }
     public Set<OrderItem>getItems(){
         return items;
+    }
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
     }
 
 
