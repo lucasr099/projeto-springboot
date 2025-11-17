@@ -99,19 +99,7 @@ Ou execute a classe principal:
 
 ---
 
-## 💬 Próximos Passos (Sugestões)
-
-* Documentação com Swagger/OpenAPI
-* Adicionar DTOs para evitar exposição direta das entidades
-* Criar testes automatizados (JUnit + Mockito)
-* Configuração de perfis (dev / prod)
-
----
 
 ## 📌 Autor
 
 Projeto desenvolvido por **Lucas Costa**.
-
----
-
-Se quiser, podemos revisar juntos e adaptar cada parte do README para ficar mais profissional, mais técnico ou mais focado em portfólio.
